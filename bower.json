@@ -26,6 +26,7 @@
     "animate-sass": "^0.8.2",
     "font-awesome": "^4.7.0",
     "font-awesome-animation": "^0.1.0",
-    "Parallax-ImageScroll": "^0.2.3"
+    "Parallax-ImageScroll": "^0.2.3",
+    "material-design-icons": "^3.0.1"
   }
 }

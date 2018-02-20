@@ -1,6 +1,6 @@
 /* Header */
 header {
-	height: 64px;
+	height: 85px;
 	background: $white;
     border-bottom: 1px solid rgba(0,0,0,.08);
     @include box-shadow(0px -3px 4px 0px rgba(0,0,0,.8));
@@ -19,7 +19,8 @@ header {
 
     .navbar-brand {
 		max-height: 100%;
-		margin-left: 15px;
+		// margin-left: 15px;
+		padding-bottom: 11px;
 
 		img {
 			max-height: 100%;
@@ -33,11 +34,11 @@ header {
     	.item {
     		display: inline-block;
     		text-decoration: none;
-    		font-size: 18px;
+			font-size: 16px;
+			letter-spacing: -0.5px;
     		outline: none;
-    		font-weight: 500;
     		color: rgba(63,63,63,0.85);
-    		margin-right: 24px;
+    		margin-right: 32px;
 
 			&.tour-icon {
 				&::before {
@@ -91,18 +92,27 @@ header {
 
     .navbar-toggler {
     	width: 74px;
-    	height: 64px;
-    	background-color: rgba(94,187,218,1);
+	    height: 101%;
+    	margin-bottom: -1px;
     	@include border-radius(0px);
-		font-size: 48px;
+		font-size: 11px;
 		line-height: 0;
 		padding: 0px;
-		color: $white;
+		color: rgba(63, 63, 63, 0.75);
 		outline: none !important;
 		box-shadow: none !important;
+	    padding-bottom: 10px;
+        border-right: 1px solid #e8e8e8;
+		
+		.material-icons {
+			display: block;
+			font-size: 30px;
+			margin-bottom: 3px;
+			color: rgba(17,17,17,0.4);
+		}
 
 		&:hover {
-			background-color: #49a8c8;
+			background-color: rgb(245,245,245);
 		}
     }
 
@@ -110,29 +120,34 @@ header {
     	position: relative;
     	border-left: 1px solid #e8e8e8;
     	height: 100%;
-    	padding-left: 70px;
-    	padding-right: 30px;
-    	background: rgba(0,0,0,.01);
+    	padding: 0 30px;
+    	
+    	.material-icons {
+		    font-size: 30px;
+		    margin: 0px 16px 0px 0px;
+		    color: rgba(98, 144, 183, 0.82);
+		    cursor: default;
+		    
+			&.dropdownIcon {
+				font-size: 24px;
+				margin-left:5px;
+				margin-right: 0px;
+			    color: rgba(17,17,17,0.4);
+		    	cursor: pointer;
+			}
+    	}
 
     	a {
     		color: rgba(63,63,63,0.75);
     		text-decoration: none;
     		outline: none;
     		font-weight: 500;
+		    font-size: 18px;
 
     		&:hover {
     			text-decoration: none;
     			color: rgba(63,63,63,0.95);
     		}
-    	}
-
-    	&::before {
-    		content: "";
-    		width: 30px;
-    		height: 100%;
-    		background: url(../images/icons/phone_manager.png) no-repeat center;
-    		position: absolute;
-    		left: 25px;
     	}
     }
 }

@@ -1,5 +1,9 @@
 header
 	nav.navbar.navbar-fixed-top
+		button.navbar-toggler(type="button", data-toggle="collapse", data-target="#exCollapsingNavbar")
+			//- For modern browsers.
+			<i class="material-icons">menu</i>
+			|меню
 		a.navbar-brand(href="#")
 			img(src="/images/logo.png", alt="Froggy Tour")
 
@@ -8,5 +12,6 @@ header
 			a.item.fire-icon(href="#") Горящие туры
 			a.item.calendar-icon(href="#") Раннее бронирование
 			.phone-line.d-flex.align-items-center
+				i.material-icons perm_phone_msg
 				a(href="tel:", target="_blank") +380(97) 514-35-15
-			button.navbar-toggler(type="button", data-toggle="collapse", data-target="#exCollapsingNavbar") &#9776;
+				i.material-icons.dropdownIcon arrow_drop_down
