@@ -1,0 +1,22 @@
+#carouselExampleIndicators.carousel.slide(data-ride="carousel")
+	ol.carousel-indicators
+		li.active(data-target="#carouselExampleIndicators", data-slide-to="0")
+		li(data-target="#carouselExampleIndicators", data-slide-to="1")
+		li(data-target="#carouselExampleIndicators", data-slide-to="2")
+
+	.carousel-inner(role="listbox")
+		.carousel-item.active
+			img.d-block(src="/images/slider/1.jpg", alt="First slide")
+			.img-description.d-flex.align-items-center.justify-content-center.flex-wrap.align-content-center
+				.title-slide САМОЕ ВРЕМЯ<br>ОТДОХНУТЬ!
+				.description-slide Здесь планируется короткое описание блока дзынь дзыдзынь
+				a(href="#").btn.btn-salate ПОДБЕРИТЕ МНЕ ТУР!
+		//- .carousel-item
+		//- 	img.d-block.img-fluid(src="/images/slider/1.jpg", alt="..slide")
+		//- .carousel-item
+		//- 	img.d-block.img-fluid(src="/images/slider/1.jpg", alt="..slide")
+
+	a.carousel-control-prev(href="#carouselExampleIndicators", role="button", data-slide="prev")
+		span.carousel-control-prev-icon(aria-hidden="true")
+	a.carousel-control-next(href="#carouselExampleIndicators", role="button", data-slide="next")
+		span.carousel-control-next-icon(aria-hidden="true")

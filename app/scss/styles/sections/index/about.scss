@@ -1,0 +1,19 @@
+/* Index page - about section */
+.index-about-section {
+	padding-bottom: 120px;
+
+	.text-section {
+		max-width: 640px;
+		text-align: center;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		background: url(../images/decor/lapi.png) no-repeat center top;
+		width: 132px;
+		height: 280px;
+	}
+}

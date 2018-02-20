@@ -1,0 +1,138 @@
+/* Header */
+header {
+	height: 64px;
+	background: $white;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    @include box-shadow(0px -3px 4px 0px rgba(0,0,0,.8));
+
+    * {
+    	outline: none !important;
+    }
+
+    nav {
+    	max-height: 100%;
+    }
+
+    .navbar {
+    	padding: 0px;
+    }
+
+    .navbar-brand {
+		max-height: 100%;
+		margin-left: 15px;
+
+		img {
+			max-height: 100%;
+		}
+    }
+
+    .nav-menu {
+    	width: calc(100% - 300px);
+	    height: 100%;
+
+    	.item {
+    		display: inline-block;
+    		text-decoration: none;
+    		font-size: 18px;
+    		outline: none;
+    		font-weight: 500;
+    		color: rgba(63,63,63,0.85);
+    		margin-right: 24px;
+
+			&.tour-icon {
+				&::before {
+					content: "";
+					display: inline-block;
+					background: url(../images/icons/menu_sprite.png) no-repeat left -1px;
+					width: 22px;
+					height: 19px;
+					position: relative;
+					top: 3px;
+					margin-right: 6px;
+				}
+				&:hover{
+					color: #62b600;
+				}
+			}
+
+			&.fire-icon {
+				&::before {
+					content: "";
+					display: inline-block;
+					background: url(../images/icons/menu_sprite.png) no-repeat left -22px;
+					width: 14px;
+					height: 20px;
+					position: relative;
+					top: 3px;
+					margin-right: 6px;
+				}
+				&:hover{
+					color: #fa5457;
+				}
+			}
+
+			&.calendar-icon {
+				&::before {
+					content: "";
+					display: inline-block;
+					background: url(../images/icons/menu_sprite.png) no-repeat left -44px;
+					width: 21px;
+					height: 19px;
+					position: relative;
+					top: 3px;
+					margin-right: 6px;
+				}
+				&:hover{
+					color: $blue_;
+				}
+			}
+    	}
+    }
+
+    .navbar-toggler {
+    	width: 74px;
+    	height: 64px;
+    	background-color: rgba(94,187,218,1);
+    	@include border-radius(0px);
+		font-size: 48px;
+		line-height: 0;
+		padding: 0px;
+		color: $white;
+		outline: none !important;
+		box-shadow: none !important;
+
+		&:hover {
+			background-color: #49a8c8;
+		}
+    }
+
+    .phone-line {
+    	position: relative;
+    	border-left: 1px solid #e8e8e8;
+    	height: 100%;
+    	padding-left: 70px;
+    	padding-right: 30px;
+    	background: rgba(0,0,0,.01);
+
+    	a {
+    		color: rgba(63,63,63,0.75);
+    		text-decoration: none;
+    		outline: none;
+    		font-weight: 500;
+
+    		&:hover {
+    			text-decoration: none;
+    			color: rgba(63,63,63,0.95);
+    		}
+    	}
+
+    	&::before {
+    		content: "";
+    		width: 30px;
+    		height: 100%;
+    		background: url(../images/icons/phone_manager.png) no-repeat center;
+    		position: absolute;
+    		left: 25px;
+    	}
+    }
+}
