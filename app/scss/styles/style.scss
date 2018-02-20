@@ -15,9 +15,9 @@
 .btn-salate {
 	padding: 14px 36px;
 	text-align: center;
-	background: #62b600;
+	background: $green_;
 	color: $white;
-	border: 1px solid #56a000;
+	border: 1px solid darken($green_, 10%);
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: bold;
@@ -27,8 +27,8 @@
 
 	&:hover {
 		color: $white;
-		background: #56a000;
-		border-color: #4f9102;
+		background: darken($green_, 5%);
+		border-color: darken($green_, 10%);
 	}
 
 	&:active {
@@ -47,12 +47,14 @@ section {
 	color: $blue_;
 	text-align: center;
 	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-bottom: 24px;
+	font-family: $comforta;
+	color: rgba(17,17,17,0.8);
+    font-weight: 300;
 }
 
 .text-section {
 	color: rgba(0,0,0,.64);
-	font-family: $comforta;
 	margin: 0px auto;
 	line-height: 24px;
 	letter-spacing: 0.25px;

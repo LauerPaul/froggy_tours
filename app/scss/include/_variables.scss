@@ -34,7 +34,9 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue_:   rgba(88,137,178,0.94);
+$red_:    rgba(205, 92, 22, 0.7);
+$blue_:   rgba(25, 71, 135, 0.7);
+$green_:  #3DAF13;
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;

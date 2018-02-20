@@ -19,7 +19,6 @@ header {
 
     .navbar-brand {
 		max-height: 100%;
-		// margin-left: 15px;
 		padding-bottom: 11px;
 
 		img {
@@ -84,7 +83,7 @@ header {
 					margin-right: 6px;
 				}
 				&:hover{
-					color: $blue_;
+					color: $red_;
 				}
 			}
     	}
@@ -125,7 +124,8 @@ header {
     	.material-icons {
 		    font-size: 30px;
 		    margin: 0px 16px 0px 0px;
-		    color: rgba(98, 144, 183, 0.82);
+		    color: $blue_;
+		    opacity: 0.8;
 		    cursor: default;
 		    
 			&.dropdownIcon {

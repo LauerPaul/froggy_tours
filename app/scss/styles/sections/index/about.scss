@@ -3,8 +3,15 @@
 	padding-bottom: 120px;
 
 	.text-section {
-		max-width: 680px;
+		max-width: 620px;
 		text-align: center;
+		font-weight: normal;
+		color: rgba(17,17,17,0.64);
+
+		strong {
+			font-weight: 700;
+			// color: $green_;
+		}
 	}
 
 	&::before {
