@@ -35,6 +35,30 @@
 		@include box-shadow(inset 0px 0px 16px 1px rgba(0,0,0,0.2) !important);
 	}
 }
+.btn-second {
+	padding: 14px 36px;
+	text-align: center;
+	background: transparent;
+	color: $blue_;
+	border: 2px solid darken($blue_, 3%);
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: bold;
+	@include border-radius(2px);
+	outline: none !important;
+	box-shadow: none !important;
+	@include transition(all 0.4s);
+
+	&:hover {
+		color: $white;
+		background: darken($blue_, 5%);
+		border-color: darken($blue_, 8%);
+	}
+
+	&:active {
+		@include box-shadow(inset 0px 0px 16px 1px rgba(0,0,0,0.2) !important);
+	}
+}
 
 .btn-default {
 	padding: 14px 36px;
