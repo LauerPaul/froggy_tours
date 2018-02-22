@@ -3,9 +3,8 @@
 * dev. Pavel Ugrynovych (Lauer)
 -------------------------------------------
 */
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Ubuntu:300,400,500,700&subset=cyrillic');
-$ubuntu: 'Ubuntu', sans-serif;
-$comforta: 'Comfortaa', cursive;
+@import "include/variables_froggy";
+@import "include/fonts";
 /**
 * [Bootstrap]
 */

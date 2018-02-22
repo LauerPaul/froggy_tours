@@ -8,10 +8,28 @@ header
 			img(src="/images/logo.png", alt="Froggy Tour")
 
 		.nav-menu.d-flex.flex-nowrap.justify-content-end.align-items-center
-			a.item.tour-icon(href="#") Поиск тура
-			a.item.fire-icon(href="#") Горящие туры
-			a.item.calendar-icon(href="#") Раннее бронирование
-			.phone-line.d-flex.align-items-center
-				i.material-icons perm_phone_msg
-				a(href="tel:", target="_blank") +380(97) 514-35-15
-				i.material-icons.dropdownIcon arrow_drop_down
+			a.item(href="#").d-flex.align-items-center
+				span
+					i.icon.icon-fire
+					|горящие туры
+			a.item(href="#").d-flex.align-items-center
+				span
+					i.icon.icon-calendar
+					|ранняя бронь
+			a.item(href="#").d-flex.align-items-center
+				span
+					i.material-icons directions_bus
+					|авто туры
+			a.item.other(href="#").d-flex.align-items-center
+				span
+					i.material-icons headset_mic
+					|помощь агента
+			a.item.line(href="tel:", target="_blank").d-flex.align-items-center
+				span
+					i.material-icons perm_phone_msg
+					//- i.material-icons.dropdownIcon arrow_drop_down
+					|контакты
+			//- .phone-line.d-flex.align-items-center
+			//- 	i.material-icons perm_phone_msg
+			//- 	a(href="tel:", target="_blank") +380(97) 514-35-15
+			//- 	i.material-icons.dropdownIcon arrow_drop_down
