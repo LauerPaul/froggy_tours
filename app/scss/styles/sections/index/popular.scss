@@ -1,6 +1,6 @@
 /* Index page - popular section */
 .popular {
-	background: url(/images/bg/egypt-tour-packages-2637992_1920.jpg) no-repeat center !important;
+	background: url(/images/bg/bg_popular3.jpg) no-repeat center !important;
 	background-size: cover !important;
 	position: relative;
 
@@ -24,7 +24,20 @@
 			bottom: 0;
 			right: 0;
 			left: 0;
-			background: rgba(0,0,0,.7);
+			background: rgba(0,0,0,.0);
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background: -moz-linear-gradient(top, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 		}
 
 	}
@@ -47,9 +60,9 @@
 			position: absolute;
 			z-index: 1;
 			width: 100%;
-			padding: 16px;
+			padding: 24px;
 			padding-bottom: 0px;
-		    bottom: -36px;
+		    bottom: -26px;
 			@include transition(all 0.4s);
 
 			.date {
@@ -57,14 +70,17 @@
 				font-family: $comforta;
 				font-size: 12px;
 				text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.6);
+				cursor: default;
 			}
 
 			.name {
 				color: $white;
 				font-family: $comforta;
-				font-size: 16px;
+				font-size: 20px;
 				text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.6);
-				padding-bottom: 14px;
+				padding-bottom: 10px;
+				font-weight: 700;
+				cursor: default;
 			}
 
 			.btn {
@@ -103,7 +119,7 @@
 
 		&:hover {
 			.info {
-				bottom: 16px;
+				bottom: 24px;
 
 				.btn {
 					bottom: 0;
