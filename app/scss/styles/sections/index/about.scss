@@ -1,6 +1,7 @@
 /* Index page - about section */
 .index-about-section {
 	padding-bottom: 120px;
+	background: #fafafa;
 
 	.text-section {
 		max-width: 620px;
@@ -22,5 +23,22 @@
 		background: url(../images/decor/lapi.png) no-repeat center top;
 		width: 132px;
 		height: 280px;
+		opacity: 0.8;
+	}
+
+	.decor {
+		position: absolute;
+		left: 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 4px;
+			left: -50px;
+			background: url(/images/decor/frog_photo.png) no-repeat center;
+			width: 335px;
+			height: 265px;
+			background-size: cover;
+		}
 	}
 }
