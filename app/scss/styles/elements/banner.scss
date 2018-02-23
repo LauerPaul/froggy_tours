@@ -35,7 +35,7 @@
 			height: 900px;
 			background: gray;
 			background-repeat: no-repeat;
-			background-position: center;
+			background-position: center top;
 			background-size: cover;
 			overflow: hidden;
 
@@ -50,7 +50,8 @@
 
 			video {
 				min-width: 100%;
-				max-width: 100%;
+				// max-width: 100%;
+				min-height: 100%;
 			}
 
 		}
@@ -62,20 +63,6 @@
 		    left: 0;
 		    right: 0;
 		    top: 0;
-			
-			&::after {
-				content: "";
-				background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.01) 100%); /* FF3.6-15 */
-				background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.01) 100%); /* Chrome10-25,Safari5.1-6 */
-				background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.01) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#03000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				width: 100%;
-				height: 100%;
-			}
 		}
 
 		.container {
@@ -92,14 +79,22 @@
 			.title-slide {
 				font-family: $comforta;
 				width: 100%;
-				font-size: 42px;
-				line-height: 42px;
+				font-size: 54px;
+				line-height: 66px;
 				letter-spacing: .5px;
 				color: $white;
 				font-weight: bold;
-				margin-bottom: 4px;
+				margin-bottom: 16px;
 				text-align: center;
-				text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+				text-shadow: 0px 4px 128px rgba(0, 50, 100, 0.32);
+				
+				span.ubuntu {
+					font-family: $ubuntu;
+				}
+				
+				&.blue {
+					color: darken($blue_, 20%);
+				}
 			}
 
 			.description-slide {
@@ -108,7 +103,21 @@
 				letter-spacing: .5px;
 				color: $white;
 				text-align: center;
-				margin-bottom: 16px;
+				margin-bottom: 24px;
+			}
+
+			&.justify-content-end {
+				.title-slide,
+				.description-slide {
+					text-align: right;
+				}
+			}
+
+			&.justify-content-start {
+				.title-slide,
+				.description-slide {
+					text-align: left;
+				}
 			}
 
 			.btn-salate {

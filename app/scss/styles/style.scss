@@ -12,12 +12,12 @@
 	}
 }
 
-.btn-salate {
+.btn-orange {
 	padding: 14px 36px;
 	text-align: center;
-	background: $blue_;
+	background: #efb300;
 	color: $white;
-	border: 1px solid darken($blue_, 3%);
+	border: 1px solid darken(#efb300, 3%);
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: bold;
@@ -27,8 +27,8 @@
 
 	&:hover {
 		color: $white;
-		background: darken($blue_, 5%);
-		border-color: darken($blue_, 8%);
+		background: darken(#efb300, 5%);
+		border-color: darken(#efb300, 8%);
 	}
 
 	&:active {
@@ -166,4 +166,9 @@ section {
 	line-height: 24px;
 	letter-spacing: 0.25px;
 	font-weight: 300;
+}
+
+input {
+	box-shadow: none;
+	outline: none;
 }

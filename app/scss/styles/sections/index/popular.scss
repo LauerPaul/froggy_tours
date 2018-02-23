@@ -1,6 +1,6 @@
 /* Index page - popular section */
 .popular {
-	background: url(/images/bg/bg_popular3.jpg) no-repeat center !important;
+	background: url(/images/bg/bg_popular2.jpg) no-repeat center !important;
 	background-size: cover !important;
 	position: relative;
 
@@ -34,9 +34,9 @@
 			bottom: 0;
 			right: 0;
 			left: 0;
-			background: -moz-linear-gradient(top, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(top, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to bottom, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			background: -moz-linear-gradient(top, #fafafa 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #fafafa 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #fafafa 0%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 		}
 
