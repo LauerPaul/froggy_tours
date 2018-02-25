@@ -28,7 +28,7 @@
 		max-height: 900px;
 
 		@media (max-width: 1380px) {
-			max-height: 590px;
+			max-height: 595px;
 		}
 		
 		.carousel-item {
@@ -40,7 +40,7 @@
 			overflow: hidden;
 
 			@media (max-width: 1380px) {
-				max-height: 590px;
+				max-height: 595px;
 			}
 			
 			img {
@@ -75,6 +75,9 @@
 		
 		.img-description {
 		    height: 100%;
+		    @media (max-width: 1380px) {
+		    	padding-right: 120px;
+		    }
 
 			.title-slide {
 				font-family: $comforta;
@@ -87,6 +90,11 @@
 				margin-bottom: 16px;
 				text-align: center;
 				text-shadow: 0px 4px 128px rgba(0, 50, 100, 0.32);
+
+			    @media (max-width: 1380px) {
+					font-size: 48px;
+					line-height: 54px;
+			    }
 				
 				span.ubuntu {
 					font-family: $ubuntu;
@@ -104,6 +112,9 @@
 				color: $white;
 				text-align: center;
 				margin-bottom: 24px;
+
+			    @media (max-width: 1380px) {
+			    }
 			}
 
 			&.justify-content-end {

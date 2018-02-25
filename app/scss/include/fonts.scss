@@ -28,6 +28,17 @@ $comforta: 'Comfortaa', cursive;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-viber {
+  &:before {
+    content: $icon-viber;     
+    color: #7c529e;
+  }
+}
+.icon-headset_mic {
+  &:before {
+    content: $icon-headset_mic; 
+  }
+}
 .icon-map {
   &:before {
     content: $icon-map; 
@@ -46,6 +57,41 @@ $comforta: 'Comfortaa', cursive;
 .icon-fire {
   &:before {
     content: $icon-fire; 
+  }
+}
+.icon-google-plus2 {
+  &:before {
+    content: $icon-google-plus2; 
+  }
+}
+.icon-facebook2 {
+  &:before {
+    content: $icon-facebook2; 
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp; 
+  }
+}
+.icon-telegram {
+  &:before {
+    content: $icon-telegram; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-skype {
+  &:before {
+    content: $icon-skype; 
   }
 }
 

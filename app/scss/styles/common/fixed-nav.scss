@@ -1,0 +1,81 @@
+/* Fixed navigation */
+aside.fixed-nav {
+	position: fixed;
+	left: -70px;
+	top: -50%;
+	bottom: -50%;
+	margin: auto;
+	height: 120px;
+	@include transition(all 0.4s);
+	z-index: 999;
+
+	&.show {
+		left: 0;
+		opacity: 0.72;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		@include box-shadow(0px 0px 24px 0px rgba(0, 0, 0, 0.24));
+	
+		li {
+			width: 40px;
+			height: 40px;
+			background: darken($blue_, 5%);
+			text-align: center;
+			color: $white;
+			cursor: pointer;
+			@include transition(all 0.2s);
+
+			&:first-child {
+				// border-bottom: 1px solid darken($blue_, 5%);
+			}
+
+			&:last-child {
+				// border-top: 1px solid darken($blue_, 5%);
+			}
+
+			&:nth-child(2) {
+				background: darken($blue_, 15%);
+
+				a {
+					color: rgba(255,255,255,0.92) !important;
+				}
+			}
+
+			&:hover {
+				background: darken($blue_, 20%);
+				@include box-shadow(inset 0px 0px 1px 0px rgba(0, 0, 0, 0.2));
+
+				a {
+					color: rgba(255,255,255,1) !important;
+				}
+
+				&:first-child {
+					// border-bottom: 1px solid darken($blue_, 10%);
+					@include box-shadow(inset 0px -1px 4px 0px rgba(0, 0, 0, 0.08));
+				}
+
+				&:last-child {
+					// border-top: 1px solid darken($blue_, 10%);
+					@include box-shadow(inset 0px 1px 4px 0px rgba(0, 0, 0, 0.08));
+				}
+			}
+
+			a {
+				color: rgba(255,255,255,.7) !important;
+
+				i {
+					font-size: 18px;
+					line-height: 40px;
+				}
+			}
+		}
+	}
+}

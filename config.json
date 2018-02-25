@@ -46,7 +46,7 @@
 		"fonts": {
 			"in": "fonts/",
 			"out": "fonts/",
-			"awesome": "libs/font-awesome/fonts/**/*.*"
+			"awesome": "libs/font-awesome/web-fonts-with-css/webfonts/**/*.*"
 		}
 
 	},

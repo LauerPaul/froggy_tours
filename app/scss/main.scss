@@ -23,7 +23,10 @@
 /**
 * [Font-awesome.css]
 */
-@import "../libs/font-awesome/scss/font-awesome";
+@import "../libs/font-awesome/web-fonts-with-css/scss/fa-solid";
+@import "../libs/font-awesome/web-fonts-with-css/scss/fa-regular";
+@import "../libs/font-awesome/web-fonts-with-css/scss/fa-brands";
+@import "../libs/font-awesome/web-fonts-with-css/scss/fontawesome";
 @import "../libs/font-awesome-animation/src/_font-awesome-animation";
 // mixins
 @import "include/_mixin";
