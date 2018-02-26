@@ -34,9 +34,9 @@
 						"app/libs/jquery/dist/jquery.js",
 						"app/libs/tether/dist/js/tether.js",
 						"app/libs/bootstrap/dist/js/bootstrap.js",
-						"app/libs/modernizer/modernizr.js",
-						"app/libs/iCheck/icheck.min.js",
-						"app/libs/Parallax-ImageScroll/jquery.imageScroll.js"
+						"app/libs/jScrollPane/script/jquery.mousewheel.js",
+						"app/libs/jScrollPane/script/jquery.jscrollpane.min.js",
+						"app/libs/iCheck/icheck.min.js"
 					]
 		},
 		"images": {

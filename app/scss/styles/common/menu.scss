@@ -1,19 +1,15 @@
 /* Menu */
-.menu-mask {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 100vh;
-	z-index: 1000;
-	background-color: rgba(0,0,0,.54);
-	filter: grayscale(50%) blur(1px) saturate(0.25) hue-rotate(320deg);
-	-webkit-filter: grayscale(50%) blur(1px) saturate(0.25) hue-rotate(320deg);
-}
-body.menu-open {
-	padding-left: 260px;
+body {
+	&:not(.hm) {
+		padding-left: 260px;
+	}
+	
+	&.hm {
+
+		aside.menu {
+			left: -260px;
+		}
+	}
 }
 aside.menu {
 	width: 260px;
@@ -24,12 +20,144 @@ aside.menu {
 	bottom: 0;
 	z-index: 1001;
 	min-height: 100vh;
-	// display: none;
+	padding-top: 70px;
 	@include box-shadow(inset -10px 0px 22px -8px rgba(0, 0, 0, 0.04));
+	
+	.wrapper {
+		overflow: auto;
+		max-height: 100%;
+	}
 
 	ul {
 		list-style: none;
-		padding: 0px;
+		padding: 12px 0px;
 		margin: 0px;
+		
+		li {
+			position: relative;
+			padding: 8px 0;
+			padding-left: 75px;
+			padding-right: 24px;
+			cursor: pointer;
+			
+			&.active {
+				a {
+					i {
+						color: $blue_;
+					}
+				}
+			}
+
+			&.separator {
+				padding: 0px;
+				border-bottom: 1px solid rgb(238,238,238);
+				margin: 12px 0;
+			}
+
+			a {
+				color: rgb(17,17,17);
+				font-size: 14px;
+				text-decoration: none !important;
+				outline: none !important;
+				
+				i {
+					color: rgb(136,136,136);
+					position: absolute;
+					left: 24px;
+					font-size: 21px;
+				    line-height: 26px;
+				    
+				    &.material-icons {
+						font-size: 23px;
+				    }
+
+				    &.fly-tours {
+				    	font-size: 26px;
+				    }
+
+				    &.bus-tours {
+						font-size: 25px;
+						left: 24px;
+				    }
+
+				    &.ukraine-tours {
+						font-size: 26px;
+						left: 23px;
+				    }
+
+				    &.events {
+						font-size: 23px;
+						left: 25px;
+				    }
+					
+					&.corporation {
+						left: 23px;
+						font-size: 27px;
+					}
+
+					&.fly-tickets {
+						font-size: 20px;
+					}
+
+				    &.documents {
+				    	left: 26px;
+				    	font-size: 23px;
+				    }
+
+				    &.about {
+						font-size: 24px;
+						left: 23px;
+				    }
+
+				    &.partners {
+						font-size: 21px;
+						left: 21px;
+				    }
+				}
+			}
+
+			&:hover {
+				background: rgb(235,235,235);
+			}
+		}
+	}
+
+	.jspPane {
+		width: 100% !important;
+	}
+
+	.footer {
+		color: hsl(0, 0%, 53.3%);
+		font-size: 12px;
+		padding: 0px 24px 24px;
+		
+		.terms {
+			color: hsl(0, 0%, 53.3%);
+			margin-right: 8px;
+			display: block;
+		}
+
+		.agree {
+			color: hsl(0, 0%, 53.3%);	
+			margin-right: 8px;
+			display: block;
+		}
+
+		.copyright {
+			color: rgba(17,17,17,0.6);
+		}
+
+		.dev {
+			margin-top: 12px;
+			
+			a {
+				color: rgba(17,17,17,0.6);
+				
+				&:hover {
+					text-decoration: none;
+					color: $blue_;
+				}
+			}
+		}
 	}
 }

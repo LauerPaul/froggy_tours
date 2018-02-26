@@ -1,17 +1,19 @@
-$(window).on('scroll', function(){aside_menu_btn()});
-$(document).ready(function(){
-	/*aside_menu_btn*/
-	aside_menu_btn()
+$(window).on('scroll', function(){
+	left_menu.aside_btn();
+	left_menu.header_hide();
+})
+.on('resize', function(){
+	/*left menu reinitial.*/
+	left_menu.reinit();
 });
+$(document).ready(function(){
+	/*aside buttons*/
+	left_menu.aside_btn();
+	/*left menu init*/
+	left_menu.init();
+})
+/*menu hover - show scroll*/
+.on('mouseenter', 'aside.menu .wrapper', function(){
+	left_menu.hover();
+})
 
-/*function aside_menu_btn*/
-function aside_menu_btn (){
-	var wh = $(window).innerHeight(),		/*user window height*/
-		plus = 50,							/*plus value int*/
-		fl = $('aside.fixed-nav'),			/*fixed left menu*/
-		dst = $(document).scrollTop(), 		/*document scroll top*/
-		mc = 'show';						/*menu scroll class*/
-
-	if(dst > parseInt(wh) + plus && !fl.hasClass(mc)){fl.addClass(mc);}
-	else if(fl.hasClass(mc) && dst < parseInt(wh) + plus){fl.removeClass(mc);}
-}
