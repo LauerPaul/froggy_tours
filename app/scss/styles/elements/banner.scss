@@ -25,14 +25,14 @@
 .carousel {
 	
 	.carousel-inner {
-		max-height: 900px;
+		max-height: 915px;
 
 		@media (max-width: 1380px) {
 			max-height: 595px;
 		}
 		
 		.carousel-item {
-			height: 900px;
+			height: 915px;
 			background: gray;
 			background-repeat: no-repeat;
 			background-position: center top;

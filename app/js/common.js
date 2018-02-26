@@ -14,6 +14,6 @@ $(document).ready(function(){
 })
 /*menu hover - show scroll*/
 .on('mouseenter', 'aside.menu .wrapper', function(){
-	left_menu.hover();
+	left_menu.hover(this);
 })
 
