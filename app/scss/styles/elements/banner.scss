@@ -27,10 +27,14 @@
 	.carousel-inner {
 		max-height: 915px;
 
-		@media (max-width: 1380px) {
+		@media (max-width: 1380px) and (min-width: 1101px) {
 			max-height: 595px;
 		}
-		
+
+		@media (max-width: 1100px) {
+			max-height: 400px;
+		}
+
 		.carousel-item {
 			height: 915px;
 			background: gray;
@@ -39,8 +43,12 @@
 			background-size: cover;
 			overflow: hidden;
 
-			@media (max-width: 1380px) {
+			@media (max-width: 1380px) and (min-width: 1101px) {
 				max-height: 595px;
+			}
+
+			@media (max-width: 1100px) {
+				max-height: 400px;
 			}
 			
 			img {
@@ -91,10 +99,16 @@
 				text-align: center;
 				text-shadow: 0px 4px 128px rgba(0, 50, 100, 0.32);
 
-			    @media (max-width: 1380px) {
+			    @media (max-width: 1380px) and (min-width: 1101px) {
 					font-size: 48px;
 					line-height: 54px;
 			    }
+
+				@media (max-width: 1100px) {
+					font-size: 38px;
+					line-height: 42px;
+					margin-bottom: 8px;
+				}
 				
 				span.ubuntu {
 					font-family: $ubuntu;
@@ -113,8 +127,10 @@
 				text-align: center;
 				margin-bottom: 24px;
 
-			    @media (max-width: 1380px) {
-			    }
+				@media (max-width: 1100px) {
+					font-size: 16px;
+					margin-bottom: 16px;
+				}
 			}
 
 			&.justify-content-end {

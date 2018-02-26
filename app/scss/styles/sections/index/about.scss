@@ -24,6 +24,12 @@
 		width: 132px;
 		height: 280px;
 		opacity: 0.8;
+
+		@media (max-width: 1100px) {
+			width: 92px;
+			height: 200px;
+			background-size: contain;
+		}
 	}
 
 	.decor {

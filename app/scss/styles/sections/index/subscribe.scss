@@ -6,6 +6,10 @@
 
 	.title-section-h1 {
 		margin-top: 0px;
+
+		@media (max-width: 1100px) {
+		    margin-bottom: 24px;
+		}
 	}
 	
 	&::before {

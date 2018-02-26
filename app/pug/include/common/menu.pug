@@ -1,5 +1,12 @@
 //- .menu-mask
+#mask-menu
 aside.menu
+	.header
+		button.navbar-toggler(type="button", onclick="_mt_()")
+			<i class="material-icons">menu</i>
+			|меню
+		a.navbar-brand(href="#")
+			img(src="/images/logo.png", alt="Froggy Tour")
 	.wrapper
 		nav
 			ul
@@ -44,7 +51,7 @@ aside.menu
 						|Авиа билеты
 				li
 					a(href="#")
-						i.fas.fa-bus
+						i.fas.fa-bus.bus-tickets
 						|Автобусные билеты
 				li
 					a(href="#")

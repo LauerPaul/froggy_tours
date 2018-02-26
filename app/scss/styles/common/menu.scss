@@ -1,16 +1,52 @@
 /* Menu */
 body {
 	&:not(.hm) {
-		padding-left: 260px;
+		@media (min-width: 1101px) {
+
+			padding-left: 260px;
+			
+			@media (max-width: 1200px) {
+				padding-left: 240px;
+			}
+		}
 	}
 	
 	&.hm {
 
 		aside.menu {
 			left: -260px;
+	
+			@media (max-width: 1200px) {
+				left: -240px;
+			}
 		}
 	}
 }
+
+@media (max-width: 1100px) {
+	#mask-menu {
+		position: fixed;
+		left: -150vw;
+		top: 0;
+		transition-property: opacity;
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		background: rgba(0, 0, 0, 0.5);
+		@include transition(opacity 0.3s);
+	    transition-duration: 200ms;
+		z-index: 1002;
+		opacity: 0;
+		right: 0;
+		bottom: auto;
+
+		&.visible {
+			opacity: 1;
+			left: 0;
+			bottom: 0;
+		}
+	}
+}
+
 aside.menu {
 	width: 260px;
 	background: #f5f5f5;
@@ -20,8 +56,12 @@ aside.menu {
 	bottom: 0;
 	z-index: 1001;
 	min-height: 100vh;
-	padding-top: 70px;
 	@include box-shadow(inset -10px 0px 22px -8px rgba(0, 0, 0, 0.04));
+	
+	@media (max-width: 1200px) {
+		width: 240px;
+		z-index: 1002;
+	}
 	
 	.wrapper {
 		overflow: auto;
@@ -32,6 +72,10 @@ aside.menu {
 		list-style: none;
 		padding: 12px 0px;
 		margin: 0px;
+
+		@media (max-width: 1200px) {
+			padding: 8px 0;
+		}		
 		
 		li {
 			position: relative;
@@ -39,6 +83,11 @@ aside.menu {
 			padding-left: 75px;
 			padding-right: 24px;
 			cursor: pointer;
+			
+			@media (max-width: 1200px) {
+				padding: 5px 0;
+				padding-left: 65px;
+			}
 			
 			&.active {
 				a {
@@ -52,6 +101,10 @@ aside.menu {
 				padding: 0px;
 				border-bottom: 1px solid rgb(238,238,238);
 				margin: 12px 0;
+
+				@media (max-width: 1200px) {
+					margin: 8px 0;
+				}
 			}
 
 			a {
@@ -60,6 +113,10 @@ aside.menu {
 				text-decoration: none !important;
 				outline: none !important;
 				
+				@media (max-width: 1200px) {
+					font-size: 13px;
+				}
+				
 				i {
 					color: rgb(136,136,136);
 					position: absolute;
@@ -67,51 +124,112 @@ aside.menu {
 					font-size: 21px;
 				    line-height: 26px;
 				    
+					@media (max-width: 1200px) {
+						font-size: 20px;
+					}
+				    
 				    &.material-icons {
 						font-size: 23px;
+
+						@media (max-width: 1200px) {
+							font-size: 20px;
+						}
 				    }
 
 				    &.fly-tours {
 				    	font-size: 26px;
+
+						@media (max-width: 1200px) {
+				    		font-size: 22px;
+						}
 				    }
 
 				    &.bus-tours {
 						font-size: 25px;
 						left: 24px;
+
+						@media (max-width: 1200px) {
+				    		font-size: 22px;
+						}
 				    }
 
 				    &.ukraine-tours {
 						font-size: 26px;
 						left: 23px;
+
+						@media (max-width: 1200px) {
+				    		font-size: 22px;
+				    		left: 24px;
+						}
 				    }
 
 				    &.events {
 						font-size: 23px;
 						left: 25px;
+
+						@media (max-width: 1200px) {
+							font-size: 20px;
+							left: 26px;
+						}
+
 				    }
 					
 					&.corporation {
 						left: 23px;
 						font-size: 27px;
+
+						@media (max-width: 1200px) {
+							left: 24px;
+							font-size: 24px;
+						}
+
 					}
 
 					&.fly-tickets {
 						font-size: 20px;
+
+						@media (max-width: 1200px) {
+							font-size: 17px;
+							left: 26px;
+						}
+
+					}
+
+					&.bus-tickets {
+						@media (max-width: 1200px) {
+							font-size: 17px;
+							left: 26px;
+						}
 					}
 
 				    &.documents {
 				    	left: 26px;
 				    	font-size: 23px;
+
+						@media (max-width: 1200px) {
+							left: 28px;
+							font-size: 19px;
+						}
 				    }
 
 				    &.about {
 						font-size: 24px;
 						left: 23px;
+
+						@media (max-width: 1200px) {
+							font-size: 21px;
+							left: 26px;
+						}
 				    }
 
 				    &.partners {
 						font-size: 21px;
 						left: 21px;
+
+						@media (max-width: 1200px) {
+							font-size: 18px;
+							left: 26px;
+						}
 				    }
 				}
 			}
@@ -126,10 +244,89 @@ aside.menu {
 		width: 100% !important;
 	}
 
+	.header {
+		border-bottom: 1px solid rgb(238,238,238);
+		height: 70px;
+		opacity: 0;
+	
+		@media (max-width: 1200px) {
+			height: 54px;
+		}
+		@media (max-width: 1100px) {
+			opacity: 1;
+		}
+
+		.navbar-toggler {
+	    	width: 74px;
+			height: 70px;
+	    	margin-bottom: -1px;
+	    	@include border-radius(0px);
+			font-size: 11px;
+			line-height: 0;
+			padding: 0px;
+			color: rgb(17,17,17);
+			outline: none !important;
+			box-shadow: none !important;
+		    padding-bottom: 10px;
+	        border-right: 1px solid #e8e8e8;
+
+			@media (max-width: 1200px) {
+				height: 54px;
+				width: 64px;
+	        }
+
+			.material-icons {
+				display: block;
+				font-size: 42px;
+				margin-bottom: 3px;
+				color: rgba(17,17,17,0.4);
+
+				@media (max-width: 1200px) {
+					font-size: 30px;
+				}
+			}
+
+			&:hover {
+
+				.material-icons {
+					color: $white;
+				}
+				
+				background-color: darken($blue_, 0%);
+				color: $white;
+				// background-color: rgb(245,245,245);
+			}
+	    }
+	    .navbar-brand {
+			max-height: 100%;
+			padding-bottom: 8px;
+			margin-right: 0px;
+			margin-left: 22px;
+			position: relative;
+			top: -4px;
+
+			@media (max-width: 1200px) {
+				height: 54px;
+			}
+
+			img {
+				max-height: 100%;
+			}
+	    }
+	}
+
 	.footer {
 		color: hsl(0, 0%, 53.3%);
 		font-size: 12px;
 		padding: 0px 24px 24px;
+
+		@media (max-width: 1200px) {
+			font-size: 11px;
+		}
+		
+		@media (max-width: 1100px) {
+			margin-bottom: 40px;
+		}
 		
 		.terms {
 			color: hsl(0, 0%, 53.3%);
