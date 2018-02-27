@@ -9,6 +9,13 @@
 		a {
 			text-decoration: none !important;
 		}
+
+		@media (max-width: 991px) and (min-width: 768px) {
+			.col-md-3 {
+				flex: 0 0 50%;
+				max-width: 50%;
+			}
+		}
 	}
 
 	.blog-item-preview {
