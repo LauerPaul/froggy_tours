@@ -3,7 +3,7 @@ footer
 		.row
 			.col-md-9.col-12
 				.row
-					.col-md-3.col-sm-6
+					.col-md-3.col-sm-4.col-6
 						nav
 							p.title Туры
 							ul
@@ -17,7 +17,7 @@ footer
 									a(href="#") Туры по Украине
 								li
 									a(href="#") Туры по США
-					.col-md-3.col-sm-6
+					.col-md-3.col-sm-4.col-6
 						nav
 							p.title Услуги
 							ul
@@ -31,7 +31,7 @@ footer
 									a(href="#") Предложение любимой
 								li
 									a(href="#") Фото и видео съемка
-					.col-md-3.col-sm-6
+					.col-md-3.col-sm-4.col-6
 						nav
 							p.title Сервисы
 							ul
@@ -41,7 +41,7 @@ footer
 									a(href="#") Автобусные билеты
 								li
 									a(href="#") Подготовка документов
-					.col-md-3.col-sm-6
+					.col-md-3.col-sm-4.col-6
 						nav
 							p.title Разделы
 							ul
@@ -52,10 +52,8 @@ footer
 								li
 									a(href="#") Сотрудничество
 								li
-									a(href="#") Контакты
-			.col-md-3.col-12
-				.row
-					.col-md-12
+									a(href="/contacts.html") Контакты
+					.col-sm-4.col-6.mobile
 						.p-20
 							.title.opacity Наши контакты
 							ul
@@ -74,25 +72,69 @@ footer
 							
 							ul.social-share
 								li
-									a(href="#", title="Facebook Like").btn.btn-default.mini.facebook
+									a(href="#", title="Facebook Like", rel="nofollow").btn.btn-default.mini.facebook
 										i.far.fa-thumbs-up
 										|Like
 								li
-									a(href="#", title="Follow twitter").btn.btn-default.mini.twitter
+									a(href="#", title="Follow twitter", rel="nofollow").btn.btn-default.mini.twitter
+										i.fab.fa-twitter
+										|Твитнуть
+					.col-sm-4.col-6.mobile
+						ul
+							li
+								a(href="#") Термины и условия
+							li
+								a(href="#") Пользовательское соглашение
+						ul.social
+							li
+								a(href="#", title="Facebook", rel="nofollow").facebook
+									i.icon.icon-facebook2
+							li
+								a(href="#", title="Instagram", rel="nofollow").instagram
+									i.icon.icon-instagram
+							li
+								a(href="#", title="Google+", rel="nofollow").google
+									i.icon.icon-google-plus2
+			.col-md-3.col-12.mobile-hide
+				.row
+					.col-md-12.col-sm-6
+						.p-20
+							.title.opacity Наши контакты
+							ul
+								li
+									a(href="tel:#").contacts
+										i.fas.fa-phone-square
+										|+380 (97) 514 - 35 - 15
+								li
+									a(href="tel:#").contacts
+										i.fas.fa-phone-square
+										|+380 (97) 514 - 35 - 15
+								li
+									a(href="mailto:#").contacts
+										i.fas.fa-envelope-square
+										|support@froggy.tours
+							
+							ul.social-share
+								li
+									a(href="#", title="Facebook Like", rel="nofollow").btn.btn-default.mini.facebook
+										i.far.fa-thumbs-up
+										|Like
+								li
+									a(href="#", title="Follow twitter", rel="nofollow").btn.btn-default.mini.twitter
 										i.fab.fa-twitter
 										|Твитнуть
 							// span.small Сайт разработан в&nbsp;
 							// 	a(href="#", target="_blank") Lauer agency
-					.col-md-12.tablet
+					.col-md-12.col-sm-6.tablet
 						ul.social
 							li
-								a(href="#", title="Facebook").facebook
+								a(href="#", title="Facebook", rel="nofollow").facebook
 									i.icon.icon-facebook2
 							li
-								a(href="#", title="Instagram").instagram
+								a(href="#", title="Instagram", rel="nofollow").instagram
 									i.icon.icon-instagram
 							li
-								a(href="#", title="Google+").google
+								a(href="#", title="Google+", rel="nofollow").google
 									i.icon.icon-google-plus2
 						ul
 							li
@@ -115,13 +157,13 @@ footer
 							.col-md-4.text-center.tablet-hide
 								ul.social
 									li
-										a(href="#", title="Facebook").facebook
+										a(href="#", title="Facebook", rel="nofollow").facebook
 											i.icon.icon-facebook2
 									li
-										a(href="#", title="Instagram").instagram
+										a(href="#", title="Instagram", rel="nofollow").instagram
 											i.icon.icon-instagram
 									li
-										a(href="#", title="Google+").google
+										a(href="#", title="Google+", rel="nofollow").google
 											i.icon.icon-google-plus2
 							.col-md-4.text-right
 								|Froggy.tours 2018 © Все права защищены

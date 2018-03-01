@@ -2,8 +2,12 @@
 body {
 	padding-top: 70px;
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1200px) and (min-width: 725px) {
 		padding-top: 54px;
+	}
+
+	@media (max-width: 724px) {
+		padding-top: 50px;
 	}
 }
 header {
@@ -17,10 +21,22 @@ header {
     left: 0;
     right: 0;
     z-index: 1002;
-    @include transition(top 0.4s);
+	@include transition(top 0.4s);
+
+	@media (max-width: 1100px) {
+		z-index: 1001;
+	}
+    
+	@media (max-width: 724px) {
+    	@include transition(top 0.1s);
+    }
 	
-	@media (max-width: 1200px) {
+	@media (max-width: 1200px) and (min-width: 725px) {
 		height: 54px;
+	}
+
+	@media (max-width: 724px) {
+		height: 50px;
 	}
 
     &.hide {
@@ -33,6 +49,10 @@ header {
 
     nav {
     	max-height: 100%;
+	
+		@media (max-width: 724px) {
+		    justify-content: flex-start !important
+		}
     }
 
     .navbar {
@@ -43,9 +63,30 @@ header {
 		max-height: 100%;
 		padding-bottom: 8px;
 
-		@media (max-width: 1200px) {
+		@media (max-width: 1200px) and (min-width: 725px) {
 			height: 54px;
 			margin-right: 5rem;
+		}
+
+		@media (max-width: 724px) {
+			height: 50px;
+		    margin-left: 12px;
+		    margin-right: 0px;
+		}
+
+		&.mobile {
+			margin-right: 8px;
+			margin-left: 0px;
+
+			@media (min-width: 542px) {
+				display: none !important;
+			}
+		}
+
+		&:not(.mobile) {
+			@media (max-width: 541px) {
+				display: none !important;
+			}
 		}
 
 		img {
@@ -57,8 +98,31 @@ header {
     	width: calc(100% - 300px);
 		height: 70px;
 
-		@media (max-width: 1200px) {
+		@media (max-width: 1200px) and (min-width: 725px) {
 			height: 54px;
+		}
+
+		@media (max-width: 724px) {	
+	    	width: calc(100% - 171px);
+			height: 50px;
+		}
+
+		@media (max-width: 541px) {
+	    	width: calc(100% - 167px);
+		}
+		
+		@media (max-width: 541px) {
+  			justify-content: flex-start !important;
+  			padding-left: 8px;
+		}
+
+		button {
+			max-height: 100%;
+			background: transparent;
+			border: none;
+			outline: none !important;
+			box-shadow: none !important;
+			cursor: pointer;
 		}
 
     	.item {
@@ -69,8 +133,11 @@ header {
     		outline: none;
     		color: rgb(17,17,17);
     		margin: 0;
-    		padding: 0px 16px;
     		height: calc(100% + 1px);
+
+			@media (min-width: 542px) {
+    			padding: 0px 16px;
+    		}	
 			
 			@media (max-width: 1200px) {
 				font-size: 11px;
@@ -79,10 +146,22 @@ header {
 			@media (max-width: 1100px) {
 				padding-top: 3px;
 			}
+			
+			@media (max-width: 541px) {
+				padding: 0px 8px;
+			}
+
+			&.mobile-hide {
+				@media (max-width: 541px) {
+					display: none !important;
+				}
+			}
 
     		&.line {
-    			border-left: 1px solid #e8e8e8;
-    			background-color: rgba(245, 245, 245, 0.35);
+				@media (min-width: 542px) {
+	    			border-left: 1px solid #e8e8e8;
+	    			background-color: rgba(245, 245, 245, 0.35);
+	    		}
     		}
 
     		&.other {
@@ -92,15 +171,17 @@ header {
     				color: #257990;
     			}
     		}
+			
+			@media (min-width: 542px) {
+	    		&:hover {
+	    			background-color: darken($blue_, 0%);
+					color: $white;
 
-    		&:hover {
-    			background-color: darken($blue_, 0%);
-				color: $white;
-
-    			i {
-    				color: $white;
-    			}
-    		}
+	    			i {
+	    				color: $white;
+	    			}
+	    		}
+	    	}
 
     		i {
 				width: 100%;
@@ -110,16 +191,28 @@ header {
 				font-size: 26px;
 				color: hsl(0, 0%, 53.3%);
 
-				@media (max-width: 1200px) {
+				@media (max-width: 1200px) and (min-width: 725px) {
 					font-size: 21px;
 					margin-bottom: 2px;
 				}
+				
+				@media (max-width: 724px) {
+					font-size: 24px;
+					margin-bottom: 0px;
+				}
+
     		}
 
     		span {
 				display: block;
 				clear: both;
 				width: 100%;
+
+				&.text {
+					@media (max-width: 724px) {
+						display: none;
+					}
+				}
     		}
 
 			&.tour-icon {
@@ -149,8 +242,11 @@ header {
 					top: 3px;
 					margin-right: 6px;
 				}
-				&:hover{
-					color: #fa5457;
+
+				@media (min-width: 542px) {
+					&:hover{
+						color: #fa5457;
+					}
 				}
 			}
 
@@ -186,10 +282,15 @@ header {
 	    padding-bottom: 10px;
         border-right: 1px solid #e8e8e8;
 
-		@media (max-width: 1200px) {
+		@media (max-width: 1200px) and (min-width: 725px) {
 			height: 54px;
 			width: 64px;
         }
+
+        @media (max-width: 724px) {
+			height: 50px;
+			width: 54px;
+		}
 
 		.material-icons {
 			display: block;
@@ -201,16 +302,26 @@ header {
 				font-size: 30px;
 			}
 		}
+		
+		@media (min-width: 542px) {
+			&:hover {
 
-		&:hover {
+				.material-icons {
+					color: $white;
+				}
+				
+				background-color: darken($blue_, 0%);
+				color: $white;
+			}
+		}
 
+		@media (max-width: 541px) {
 			.material-icons {
 				color: $white;
 			}
 			
 			background-color: darken($blue_, 0%);
 			color: $white;
-			// background-color: rgb(245,245,245);
 		}
     }
 

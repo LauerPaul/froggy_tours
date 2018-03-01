@@ -1,6 +1,5 @@
 /* Index page - popular section */
 .popular {
-	background: url(/images/bg/bg_popular2.jpg) no-repeat center !important;
 	background-size: cover !important;
 	position: relative;
 	
@@ -11,8 +10,19 @@
 		}
 	}
 
+	@media (min-width: 576px) {
+		background: url(/images/bg/bg_popular2.jpg) no-repeat center !important;
+	}
+	@media (max-width: 575px) {
+		background: #e9f1f4 url(/images/bg/bg_popular2_mobile.jpg) no-repeat center bottom!important;
+	}
+
 	.title-description {
 		margin-bottom: 23px;
+
+		@media (max-width: 724px) {
+			margin-bottom: 12px;
+		}
 	}
 
 	.mask {
@@ -53,9 +63,9 @@
 	}
 
 	.item-tour-case {
+		max-width: 350px;
+		margin: 15px auto;
 		position: relative;
-		margin-top: 15px;
-		margin-bottom: 15px;
 		@include border-radius(2px);
 		overflow: hidden;
 		

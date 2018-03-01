@@ -6,6 +6,10 @@
 		padding-top: 42px;
 		padding-bottom: 8px;
 
+		@media (max-width: 724px) {
+			margin-bottom: -24px;
+		}
+
 		a {
 			text-decoration: none !important;
 		}
@@ -18,7 +22,15 @@
 		}
 	}
 
+	.btn-second {
+		@media (max-width: 724px) {
+			margin-bottom: 16px;
+		}
+	}
+
 	.blog-item-preview {
+	    max-width: 255px;
+	    margin: 0 auto;
 		margin-bottom: 36px;
 		border: 1px solid #ffffff;
 		@include box-shadow(0px 2px 128px 0px rgba(0, 0, 0, 0.06));

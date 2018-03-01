@@ -36,7 +36,10 @@
 						"app/libs/bootstrap/dist/js/bootstrap.js",
 						"app/libs/jScrollPane/script/jquery.mousewheel.js",
 						"app/libs/jScrollPane/script/jquery.jscrollpane.min.js",
-						"app/libs/iCheck/icheck.min.js"
+						"app/libs/iCheck/icheck.min.js",
+						"app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js",
+						"app/libs/jquery-touchswipe/jquery.touchSwipe.min.js",
+						"app/libs/slick-carousel/slick/slick.min.js"
 					]
 		},
 		"images": {

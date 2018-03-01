@@ -37,7 +37,7 @@ left_menu = {
 		}
 	},
 	reinit: function() {
-		msa.reinitialise();
+		if(typeof(msa) !== 'undefined') msa.reinitialise();
 	},
 	hover: function(o) {
 		var show_scroll = setTimeout(function(){
@@ -59,6 +59,10 @@ left_menu = {
 			dst = $(document).scrollTop(), 		/*document scroll top*/
 			hc = 'hide';						/*header scroll class*/
 
+		if($(window).width() < 725) {
+			return false;
+		}
+
 		if(
 			$('body').hasClass('hm') &&
 			dst > parseInt(wh) + plus &&
@@ -76,6 +80,11 @@ left_menu = {
 			fl = $('aside.fixed-nav'),			/*fixed left menu*/
 			dst = $(document).scrollTop(), 		/*document scroll top*/
 			mc = 'show';						/*menu scroll class*/
+
+		if($(window).width() < 725) {
+			fl.removeClass(mc);
+			return false;
+		}
 
 		if(dst > parseInt(wh) + plus && !fl.hasClass(mc) && $('body').hasClass('hm')){fl.addClass(mc);}
 		else if(fl.hasClass(mc) && dst < parseInt(wh) + plus || !$('body').hasClass('hm')){fl.removeClass(mc);}

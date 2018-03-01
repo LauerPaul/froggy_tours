@@ -44,9 +44,19 @@ aside.fixed-nav {
 			&:nth-child(2) {
 				background: darken($blue_, 15%);
 
-				a {
+				a,
+				button {
 					color: rgba(255,255,255,0.92) !important;
 				}
+			}
+
+			button {
+				max-height: 100%;
+				background: transparent;
+				border: none;
+				outline: none !important;
+				box-shadow: none !important;
+				cursor: pointer;
 			}
 
 			&:hover {
@@ -68,7 +78,8 @@ aside.fixed-nav {
 				}
 			}
 
-			a {
+			a,
+			button {
 				color: rgba(255,255,255,.7) !important;
 
 				i {

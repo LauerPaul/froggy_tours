@@ -4,13 +4,29 @@ footer {
 	color: #A5A5A5;
 	padding-top: 64px;
 	padding-bottom: 0px;
-	
+
+	.mobile-hide {
+		@media (max-width: 767px) {
+			display: none !important;
+		}
+	}
+
+	.tablet-hide {
+		@media (max-width: 991px) {
+			display: none !important;
+		}
+	}
+
 	.tablet {
-		@media (min-width: 992px) and (min-width: 768px) {
+		@media (max-width: 767px) {
+			display: none !important;
+		}
+
+		@media (min-width: 992px) {
 			display: none;
 		}
 	
-		@media (max-width: 991px) and (min-width: 768px) {
+		@media (max-width: 991px) {
 			text-align: right;
 			
 			ul li {
@@ -18,15 +34,44 @@ footer {
 			}
 		}
 	}
-
-	.tablet-hide {
-		@media (max-width: 991px) and (min-width: 768px) {
+	.mobile {
+		@media (min-width: 768px) {
 			display: none !important;
+		}
+
+		.p-20 {
+			padding-left: 0px;
+		}
+
+		ul li a .fas {
+		    font-size: 14px;
+		    margin-right: 6px;
+		    position: relative;
+		    top: 1px;
+		}
+
+		.social-share {
+			margin-bottom: 0px;
+		}
+
+		ul:first-child {
+		    margin-top: 32px;
+
+		    li {
+		    	font-size: 12px;
+		    }
+		}
+
+		.social {
+			li {
+			    font-size: 21px;
+			    margin-top: 2px;
+			}
 		}
 	}
 
-	@media (max-width: 991px) and (min-width: 768px) {
-		.col-md-9 {
+	.col-md-9 {
+		@media (max-width: 991px) and (min-width: 768px) {
 			max-width: 66.66667%;
 		    flex: 0 0 66.66667%;
 		    
@@ -35,7 +80,15 @@ footer {
 				max-width: 50%;
 		    }
 		}
-		.col-md-3 {
+		@media (max-width: 767px) {
+			.col-sm-6 {
+				text-align: center;
+			}
+		}
+	}
+
+	.col-md-3 {
+		@media (max-width: 991px) and (min-width: 768px) {
 		    flex:0 0 33.33333%;
 			max-width: 33.33333%;
 		}
@@ -65,6 +118,11 @@ footer {
 				font-size: 12px;
 				margin: 0px 4px;
 
+				@media (max-width: 575px) {
+					font-size: 10px;
+					line-height: 16px;
+				}
+
 			 	&:first-child {
 			    	margin-left: 0px;
 			    }
@@ -86,6 +144,12 @@ footer {
 		   		text-align: center !important;
 			}
 		}
+
+		@media (max-width: 767px) {
+			.text-right {
+				text-align: center !important;
+			}
+		}
 	}
 
 	.title {
@@ -98,6 +162,10 @@ footer {
 
 		&.opacity {
 			opacity: 0.24;
+		}
+
+		@media (max-width: 575px) {
+			font-size: 15px;
 		}
 	}
 
@@ -237,6 +305,12 @@ footer {
 
 			@media (max-width: 1100px) {
 				font-size: 13px;
+			    line-height: 24px;
+			}
+
+			@media (max-width: 341px) {
+				font-size: 10px;
+				line-height: 16px;
 			}
 
 			a {

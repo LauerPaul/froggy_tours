@@ -34,7 +34,7 @@ body {
 		background: rgba(0, 0, 0, 0.5);
 		@include transition(opacity 0.3s);
 	    transition-duration: 200ms;
-		z-index: 1002;
+		z-index: 1001;
 		opacity: 0;
 		right: 0;
 		bottom: auto;
@@ -60,9 +60,12 @@ aside.menu {
 	
 	@media (max-width: 1200px) {
 		width: 240px;
+	}
+
+	@media (max-width: 1100px) {
 		z-index: 1002;
 	}
-	
+
 	.wrapper {
 		overflow: auto;
 		max-height: 100%;
@@ -318,7 +321,7 @@ aside.menu {
 	.footer {
 		color: hsl(0, 0%, 53.3%);
 		font-size: 12px;
-		padding: 0px 24px 24px;
+		padding: 0px 24px 72px;
 
 		@media (max-width: 1200px) {
 			font-size: 11px;

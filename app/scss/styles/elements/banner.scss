@@ -35,6 +35,10 @@
 			max-height: 400px;
 		}
 
+		@media (max-width: 724px) {
+			max-height: 320px;
+		}
+
 		.carousel-item {
 			height: 915px;
 			background: gray;
@@ -49,6 +53,10 @@
 
 			@media (max-width: 1100px) {
 				max-height: 400px;
+			}
+			
+			@media (max-width: 724px) {
+				max-height: 320px;
 			}
 			
 			img {
@@ -83,9 +91,13 @@
 		
 		.img-description {
 		    height: 100%;
-		    @media (max-width: 1380px) {
+		    @media (max-width: 1380px) and (min-width: 725px) {
 		    	padding-right: 120px;
 		    }
+			
+			@media (max-width: 724px) {
+		        justify-content: center !important;
+			}
 
 			.title-slide {
 				font-family: $comforta;
@@ -109,6 +121,11 @@
 					line-height: 42px;
 					margin-bottom: 8px;
 				}
+
+				@media (max-width: 724px) {
+					text-align: center !important;
+					font-size: 32px;
+				}
 				
 				span.ubuntu {
 					font-family: $ubuntu;
@@ -130,6 +147,11 @@
 				@media (max-width: 1100px) {
 					font-size: 16px;
 					margin-bottom: 16px;
+				}
+				
+				@media (max-width: 724px) {
+					text-align: center !important;
+					font-size: 14px;
 				}
 			}
 

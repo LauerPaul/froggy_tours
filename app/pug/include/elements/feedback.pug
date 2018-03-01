@@ -1,0 +1,62 @@
+.modal.fade#feedback(tabindex="-1", role="dialog", aria-labelledby="exampleModalLabel", aria-hidden="true")
+	.modal-dialog.modal-lg(role="document")
+		.modal-content
+			.modal-body
+				.container-fluid
+					.row
+						.col-4.justify-content-center.d-flex.color
+							//- span Так же, Вы можете получить консультацию или задать интересующие Вас вопросы, написав нам в группах facebook и instagramm!
+						.col-8
+							form
+								.modal-header
+									button.close(type="button", data-dismiss="modal", aria-label="Close")
+										span(aria-hidden="true") &times;
+								.title Заполните форму<br>и наш агент свяжется с Вами!
+								.form
+									.input-group
+										input(type="text", name="name", placeholder="Ваше имя").form-control
+									.row.p-12
+										.col-6
+											.input-group
+												input(type="text", name="email", placeholder="Ваш e-mail").form-control
+										.col-6
+											.input-group
+												input(type="text", name="tel", placeholder="Ваш телефон").form-control
+									//.input-group
+										select(name="country", placeholder="Направление").form-control
+											option(value="Egypt") Египет
+											option(value="T") Турция
+									.description-title Вы можете указать свои пожелания (это поможет агенту подготовиться к консультации и сэкономит Ваше время):
+									.input-group
+										textarea(name="country", placeholder="Пожелания").form-control
+
+									.description-title Укажите удобный способ связи:
+									.input-group.justify-content-between.flex-nowrap.methods
+										label
+											input(type="radio", name="method", value="phone").form-control
+											.case
+												i.fas.fa-phone-volume
+												span Телефон
+										label
+											input(type="radio", name="method", value="phone").form-control
+											.case
+												i.fab.fa-viber
+												span Viber
+										label
+											input(type="radio", name="method", value="phone").form-control
+											.case
+												i.icon.icon-telegram
+												span Telegram
+										label
+											input(type="radio", name="method", value="phone").form-control
+											.case
+												i.icon.icon-whatsapp
+												span Whatsapp
+										label
+											input(type="radio", name="method", value="skype").form-control
+											.case
+												i.icon.icon-skype
+												span Skype
+								.modal-footer
+									//- button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+									button.btn.btn-orange(type="button") Отправить заявку
